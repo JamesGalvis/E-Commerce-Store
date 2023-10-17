@@ -1,3 +1,5 @@
+'use client';
+
 import { Product } from '@/types';
 import Image from 'next/image';
 import React from 'react';
@@ -11,14 +13,14 @@ interface ProductCardProps {
 }
 
 function ProductCard({ data }: ProductCardProps) {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/product/${data?.id}`)
-  }
+    router.push(`/product/${data?.id}`);
+  };
 
   return (
-    <div 
+    <div
       onClick={handleClick}
       className="group bg-white cursor-pointer rounded-xl border p-3 space-y-4"
     >
@@ -27,7 +29,7 @@ function ProductCard({ data }: ProductCardProps) {
           src={data?.images?.[0]?.url}
           fill
           alt={data.name}
-          className="aspect-square object-cover rounded-md"
+          className="aspect-square object-cover rounded-md transition"
         />
         <div className="absolute w-full px-6 bottom-5 opacity-0 group-hover:opacity-100 transition">
           <div className="flex justify-center gap-x-6">

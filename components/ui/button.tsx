@@ -9,6 +9,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
+        {...props}
         className={cn(
           `
         w-auto
