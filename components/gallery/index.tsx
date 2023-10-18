@@ -12,7 +12,7 @@ interface GalleryProps {
 function Gallery({ images }: GalleryProps) {
   return (
     <Tab.Group as="div" className="flex flex-col-reverse">
-      <div className="hidden sm:block w-full max-w-2xl lg:max-w-none mx-auto mt-6">
+      <div className="block w-full max-w-2xl lg:max-w-none mx-auto mt-6">
         <Tab.List className="grid grid-cols-4 gap-6">
           {images.map((image) => (
             <GalleryTab key={image.id} image={image} />

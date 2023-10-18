@@ -14,7 +14,7 @@ function PreviewModal() {
   }
   return (
     <Dialog open={previewModal.isOpen} onOpenChange={previewModal.onClose}>
-      <DialogContent className="w-full max-w-3xl overflow-hidden rounded-lg text-left align-middle">
+      <DialogContent className="w-full max-w-3xl overflow-x-hidden rounded-xl text-left align-middle">
         <div className="grid grid-cols-1 sm:grid-cols-12 items-start w-full gap-x-6 lg:gap-x-8 gap-y-8">
           <div className="sm:col-span-4 lg:col-span-5">
             <Gallery images={product.images} />

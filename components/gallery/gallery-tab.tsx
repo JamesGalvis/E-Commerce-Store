@@ -17,7 +17,7 @@ function GalleryTab({ image }: GalleryTabProps) {
     >
       {({ selected }) => (
         <div>
-          <span className="absolute h-full w-full aspect-square inset-0 overflow-hidden rounded-md">
+          <span className="absolute h-full w-full min-h-[40px] min-w-[40px] aspect-square inset-0 overflow-hidden rounded-md">
             <Image
               src={image.url}
               fill
@@ -27,7 +27,7 @@ function GalleryTab({ image }: GalleryTabProps) {
           </span>
           <span
             className={cn(
-              'absolute inset-0 rounded-md ring-2 ring-offset-0',
+              'absolute inset-0 rounded-md ring-2 ring-offset-0 min-h-[40px] min-w-[40px]',
               selected ? 'ring-black' : 'ring-transparent'
             )}
           />

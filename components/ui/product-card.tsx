@@ -41,7 +41,7 @@ function ProductCard({ data }: ProductCardProps) {
           alt={data.name}
           className="aspect-square object-cover rounded-md transition"
         />
-        <div className="absolute w-full px-6 bottom-5 opacity-0 group-hover:opacity-100 transition">
+        <div className="max-sm:hidden absolute w-full px-6 bottom-5 opacity-0 group-hover:opacity-100 transition">
           <div className="flex justify-center gap-x-6">
             <IconButton
               onClick={onPreview}
